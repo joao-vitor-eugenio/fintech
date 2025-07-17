@@ -1,0 +1,20 @@
+
+.date-input,
+.date-input-label {
+  font-size: 1rem;
+  color: var(--color-2);
+  padding: var(--gap-s) .75rem;
+  background-color: var(--color-4);
+  border-radius: var(--gap);
+}
+
+.date-input {
+  border: none;
+  font-family: monospace;
+}
+
+.date-input-label {
+  display: block;
+  margin-bottom: var(--gap-s);
+  font-weight: 600;
+}
