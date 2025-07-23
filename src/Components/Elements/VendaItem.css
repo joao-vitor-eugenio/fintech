@@ -1,0 +1,26 @@
+.venda-item {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: var(--gap);
+    margin-bottom: var(--gap);
+    align-items: center;
+}
+
+.venda-item div:last-child {
+    justify-self: end;
+}
+
+.venda-item a {
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+@media (max-width: 700px) {
+    .venda-item {
+        grid-template-columns: 1fr;
+    }
+
+    .venda-item div:last-child {
+        justify-self: start;
+    }
+}

@@ -1,0 +1,15 @@
+.date-range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+@media (max-width: 1000px) {
+  .date-range {
+    grid-template-columns: 1fr;
+  }
+
+  .date-range *:last-child {
+    grid-row: 1;
+  }
+}
