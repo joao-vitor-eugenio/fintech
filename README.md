@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Fintech Dashboard
 
-Currently, two official plugins are available:
+Aplicação web de dashboard para uma fintech, desenvolvida em React e TypeScript, que permite visualizar, filtrar e analisar vendas, com gráficos e listagem detalhada das transações.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- Visualização de resumo financeiro (total de vendas, recebidos, a receber, pagamentos com erro)
+- Filtro de vendas por período (data inicial e final)
+- Navegação entre resumo e listagem de vendas
+- Visualização detalhada de cada venda
+- Gráfico de vendas por status (pago, processando, falha)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [Recharts](https://recharts.org/) (gráficos)
+- CSS Modules
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Instalação
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/joao-vitor-eugenio/fintech.git
+   cd fintech
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Rode o projeto em modo desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+4. Acesse [http://localhost:5173](http://localhost:5173) no navegador.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts Disponíveis
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` — Inicia o servidor de desenvolvimento
+- `npm run build` — Gera a build de produção
+- `npm run preview` — Visualiza a build de produção localmente
+- `npm run lint` — Executa o linter
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Estrutura do Projeto
+
+- `src/` — Código-fonte principal
+  - `Components/` — Componentes reutilizáveis (Elementos, Layout, Forms)
+  - `Pages/` — Páginas principais (Resumo, Vendas, Venda)
+  - `Contexts/` — Contexto global de dados
+  - `Hooks/` — Hooks customizados
+  - `assets/` — Imagens e ícones
+
+## Licença
+
+Este projeto é apenas para fins de estudo e demonstração.
